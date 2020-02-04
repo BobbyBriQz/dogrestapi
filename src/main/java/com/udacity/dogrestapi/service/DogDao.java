@@ -12,5 +12,7 @@ public interface DogDao {
     String retrieveDogBreedById(Long id);
     List<String> retrieveDogNames();
 
+    void insertDog(Dog dog);
+
 
 }

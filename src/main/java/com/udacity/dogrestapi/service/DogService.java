@@ -65,4 +65,10 @@ public class DogService implements DogDao {
 
         return names;
     }
+
+    @Override
+    public void insertDog(Dog dog) {
+
+        dogRepository.save(dog);
+    }
 }
