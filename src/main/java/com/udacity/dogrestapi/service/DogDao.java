@@ -11,8 +11,9 @@ public interface DogDao {
     List<String> retrieveDogBreed();
     String retrieveDogBreedById(Long id);
     List<String> retrieveDogNames();
-
-    void insertDog(Dog dog);
+    Dog insertDog(Dog dog);
+    void deleteDogById(Long id);
+    void deleteAllDogs();
 
 
 }

@@ -15,7 +15,7 @@ import java.util.Optional;
 public class DogService implements DogDao {
 
     @Autowired
-    DogRepository dogRepository;
+    private DogRepository dogRepository;
 
     @Override
     public List<Dog> retrieveDogs() {
@@ -67,8 +67,20 @@ public class DogService implements DogDao {
     }
 
     @Override
-    public void insertDog(Dog dog) {
+    public Dog insertDog(Dog dog) {
 
-        dogRepository.save(dog);
+        return dogRepository.save(dog);
+    }
+
+    @Override
+    public void deleteDogById(Long id) {
+
+        dogRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAllDogs() {
+
+        dogRepository.deleteAll();
     }
 }
